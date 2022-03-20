@@ -1,0 +1,33 @@
+clear; close all; clc;
+
+
+dx = 0.1;
+dy = 0.1;
+nx = 20;
+ny = 20;
+
+
+for i=1:nx
+    for j=1:ny
+        u(i+1,j) = u(i,j) + dx/u(i,j)*...
+            (mu/rho*(u(i,j+1)-2*u(i,j)+u(i,j-1))/dy^2- v(i,j)*(u(i,j+1)-u(i,j-1))/2*dy);
+        
+        v(i+1,j) =
+
+    end
+
+
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
