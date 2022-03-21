@@ -1,5 +1,7 @@
 % clear; close all; clc;
 
+blasius;
+
 L = 50e-2; %m
 d = 7e-3; %m
 
@@ -123,7 +125,7 @@ hold on;
 plot(fprime, eta);
 xlabel('u/Uinf');
 ylabel('位置 [mm]');
-
+legend('CFD','ブラジウスの解');
 
 
 big;
