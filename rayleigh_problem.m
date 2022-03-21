@@ -23,7 +23,8 @@ for idx=1:length(ts)
   for idy=2:length(y)-1
     y_partial = y(1:idy);
     dudy_partial = dudy(1:idy);
-    u = trapz(dudy_partial,y_partial);
+      u = trapz(dudy_partial,y_partial);
+%        u = trapz(y_partial, dudy_partial);??
     us(idy) = u;
   end
   figure(2);
