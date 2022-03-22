@@ -1,5 +1,7 @@
 clear; close all; clc;
 
+Illingworth_Stewartson_transformation;
+
 eta = linspace(0, 20, 50);
 fprimeprime_tmps = linspace(0.45,0.48,1000);
 errors = [];
@@ -28,12 +30,13 @@ for idx=1:length(Mes)
     Tw_Te = 1;
     u_Ue = fprime;
     gamma = 1.4;
-    T_Te = Tw_Te + (1-Tw_Te).*u_Ue+(gamma-1)/2*Me^2.*u_Ue.*(1-u_Ue);
+    T_Te = 1+(gamma-1)/2*Me^2.*(1-u_Ue.^2);
     plot(T_Te, eta2);
     eta_comp = [];
     for jdx=1:length(eta2)
-      eta_partial = eta2(1:jdx);
-      T_Te_partial = T_Te(1:jdx);
+      eta_partial = [0;eta2(1:jdx)];
+      T_Te_partial = [0;T_Te(1:jdx)];
+      1/sqrt(2)*trapz(eta_partial, T_Te_partial);
       eta_comp(end+1) = 1/sqrt(2)*trapz(eta_partial, T_Te_partial);
     end    
     eta_comps(end+1,:) = eta_comp;
