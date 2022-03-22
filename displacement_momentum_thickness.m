@@ -17,3 +17,4 @@ legend('$$\left(1-\frac{u}{U_{\infty}}\right)$$', '$$U_{\infty}\left(1-\frac{u}{
 title('排除厚さと運動量厚さの計算');
 
 big;
+
