@@ -10,7 +10,7 @@ for idx=1:length(fprimeprime_tmps)
     fprime_inf = fprime(end);
     errors(end+1) = abs(fprime_inf-1);
     if abs(fprime_inf-1)<0.0001
-        fprintf("found optimal fprimeprime: %.4f\n",fprimeprime_tmp);
+        fprintf("found optimal f''(0): %.4f\n",fprimeprime_tmp);
         break;
     end
 end
